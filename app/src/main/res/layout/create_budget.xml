@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Each"
+        android:id="@+id/create_budget_top_line"
+        android:layout_marginTop="51dp"
+        android:layout_alignParentTop="true"
+        android:layout_toLeftOf="@+id/create_budget_amount"
+        android:layout_toStartOf="@+id/create_budget_amount" />
+
+    <EditText
+        android:hint="Enter Amount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:ems="10"
+        android:id="@+id/create_budget_amount"
+        android:layout_below="@+id/create_budget_top_line"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="on"
+        android:id="@+id/textView4"
+        android:layout_below="@+id/create_budget_amount"
+        android:layout_alignLeft="@+id/create_budget_top_line"
+        android:layout_alignStart="@+id/create_budget_top_line" />
+
+    <EditText
+        android:hint="Enter Commodity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/create_budget_commodity"
+        android:layout_below="@+id/create_budget_amount"
+        android:layout_alignLeft="@+id/create_budget_amount"
+        android:layout_alignStart="@+id/create_budget_amount"
+        android:layout_alignRight="@+id/create_budget_amount"
+        android:layout_alignEnd="@+id/create_budget_amount" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Set Budget"
+        android:id="@+id/create_budget_button"
+        android:onClick="onCreateBudgetButton"
+        android:layout_below="@+id/create_budget_commodity"
+        android:layout_centerHorizontal="true" />
+
+    <Spinner
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:id="@+id/week_month_spinner"
+        android:layout_above="@+id/create_budget_amount"
+        android:layout_toRightOf="@+id/create_budget_top_line"
+        android:layout_marginLeft="5dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="I will only spend"
+        android:id="@+id/textView5"
+        android:layout_above="@+id/create_budget_amount"
+        android:layout_toRightOf="@+id/week_month_spinner"
+        android:layout_toEndOf="@+id/week_month_spinner" />
+
+</RelativeLayout>
